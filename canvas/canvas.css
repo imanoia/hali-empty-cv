@@ -1,0 +1,11 @@
+@charset "UTF-8";
+@font-face;
+
+@counter-style;
+
+canvas{
+    width:800 ;
+    height:500 ;
+    display: block;
+    border: 2px solid #3fc;
+}

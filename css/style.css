@@ -14,7 +14,11 @@
 }
 */
 
-body {}
+body {
+    background-color: rgba(130, 130, 200, 1);
+    font-family: Open Sans, sans-serif;
+    line-height: 1.5em;
+}
 
 .clearfix {
     clear: both;
@@ -26,65 +30,30 @@ body {}
 
 }
 
+.tag {
+    padding-top: 2em;
+    padding-bottom: 1em;
+}
+
 .tag h2 {
     width: 100%;
     text-align: center;
-    border-bottom: .1em dotted;
+    border-bottom: .1em dashed;
     border-right: 0;
-    line-height: 1em;
-    border-bottom-color: palevioletred;
+    line-height: .2em;
+    border-bottom-color: #eee;
 
 }
 
 .tag h2 span {
-    background: palevioletred;
+    background-color: palevioletred;
     padding: .1em .1em;
     box-shadow: .1em palevioletred;
     color: #fff;
-    /*color: #4b3bff;*/
-    border-radius: 20%;
+    border-radius: 50%;
 }
 
-.intro_container {
-    width: 40%;
-    margin: auto;
-}
-
-.header .slider {
-    background-image: url(../image/computer-work.jpg);
-    background-size: cover;
-    background-color: #eee;
-    height: 20em;
-}
-
-.header .slider .intro {
-    padding-top: 2em;
-    height: 10em;
-    text-align: center;
-    width: 100%;
-}
-
-.header .slider .intro h2 {
-    margin: 0, auto;
-    color: #4b3bff;
-    background-color: white;
-    font-size: 2em;
-    border: .1em solid darkslategrey;
-    border-bottom: none;
-    margin-bottom: 2em;
-}
-
-.header .slider .intro button {
-    font-size: 2em;
-    font-style: oblique;
-    font-weight: bold;
-    color: #ff3bef;
-    border: .1em solid darkslategrey;
-    border-top: none;
-    background-color: white;
-}
-
-/*new nav carousel start*/
+/*carousel start*/
 .carousel-item {
     height: 20em;
 }
@@ -109,20 +78,22 @@ body {}
     margin: 0;
 }
 
-/*new carousel style start*/
-/*new nav style start*/
-/*new nav style end*/
+/*carousel style end*/
 
+/*nav style start*/
 .header .navbar {
-    background-color: #4b3bff;
+    background-color: #555;
     color: aliceblue;
     overflow: hidden;
     border: .1em dotted;
     box-shadow: .2em .2em palevioletred;
 }
 
+.footer h4 span,
 .header .navbar h2 span {
     background-color: palevioletred;
+    border: .01em solid #fff;
+    border-radius: 50%;
 }
 
 .header .navbar ul {
@@ -152,19 +123,17 @@ body {}
     transition-delay: .2sec;
 }
 
-.education .edu:hover {
-    box-shadow: 0 .2em 0 .2em inset #333;
-}
+/*nav style end*/
 
 /* start about & education style*/
 .about .section,
 .education .section {
     margin-top: 2em;
-    margin-bottom: 3em;
+    margin-bottom: 5em;
     margin-left: 2em;
     background-color: #eee;
     border-radius: 4em;
-    border: .2em solid black;
+    border: .2em solid white;
     transform: matrix(1, -0.3, 0, 1, 0, 0);
     box-shadow: 0 .1em 0 .1em inset palevioletred;
 }
@@ -172,7 +141,7 @@ body {}
 .about .section,
 .education .section:hover {
     transform: matrix(1.1, -0.3, 0, 1, 0, 0);
-    box-shadow: 0 .1em 0 .1em inset palevioletred;
+    box-shadow: 0 .3em 0 .3em inset palevioletred;
     background-blend-mode: color-dodge;
 }
 
@@ -180,7 +149,7 @@ body {}
 .about p,
 .education h5,
 .education p {
-    color: #555;
+    color: #8a5674;
     text-align: center;
 }
 
@@ -203,11 +172,11 @@ body {}
 }
 
 .timeline h2 {
-    color: #555;
+    color: #8a5674;
 }
 
 .timeline i {
-    color: #4b3bff;
+    color: palevioletred;
 }
 
 .timeline-box {
@@ -220,7 +189,7 @@ body {}
     align-items: left;
     position: relative;
     flex-direction: column;
-    box-shadow: 0 30px 60px rgba(200, 0, 200, .2);
+    box-shadow: 0 30px 60px rgba(20, 30, 200, .2);
     transition: transform .2s;
     border: .5em solid #fff;
     border-radius: 4em;
@@ -236,12 +205,12 @@ body {}
 
 .timeline .round h1,
 .timeline .round h6 {
-    background-color: #4b3bff;
+    background-color: #678;
     color: white;
     display: inline-block;
     margin: 0;
     padding: .1em;
-    border: .1em solid #4b3bff;
+    border: .1em solid #678;
 }
 
 .round h1 {
@@ -253,10 +222,10 @@ body {}
 }
 
 .date h6 {
-    background-color: #4b3bff;
+    background-color: #678;
     color: white;
     display: inline-block;
-
+    background-color: palevioletred;
 }
 
 /* .box:hover
@@ -303,7 +272,7 @@ body {}
     height: 10em;
     fill: none;
     stroke-width: 10;
-    stroke: #000;
+    stroke: #8a5674;
     transform: translate(5px, 5px);
     stroke-dasharray: 440;
     stroke-dashoffset: 440;
@@ -317,7 +286,7 @@ body {}
 
 .add-box .percent svg circle:nth-child(2) {
     stroke-dashoffset: calc(440 - (440 * 87) / 100);
-    stroke: #4b3bff;
+    stroke: #678;
     /*stroke: #33a9f4;*/
 }
 
@@ -330,7 +299,7 @@ body {}
     justify-content: center;
     align-items: center;
     position: absolute;
-    color: #555;
+    color: #8a5674;
 }
 
 .add-box .percent .num h2 {
@@ -343,7 +312,7 @@ body {}
 
 .add-box .text {
     padding 10px 0 0;
-    color: #999;
+    color: #8a5674;
     font-weight: 700;
     letter-spacing: 1px;
 }
@@ -357,7 +326,7 @@ body {}
 }
 
 .skills i {
-    color: palevioletred;
+    color: papayawhip;
     font-weight: bold;
 }
 
@@ -372,62 +341,22 @@ body {}
 
 .skills .progress h3 {
     text-transform: capitalize;
-    color: #555;
+    color: #999;
     margin: .5em;
 }
 
 .skills .progress .rate {
-    background-color: gainsboro;
+    background-color: #678;
     overflow: hidden;
 
-}
-
-.skills .progress .rate span {
-    background-color: #87207e;
-    overflow: hidden;
-    color: #4b3bff;
-}
-
-.skills .progress .rate span.html {
-    color: azure;
-    padding-left: 19em;
-    padding-right: 1em;
-}
-
-.skills .progress .rate span.css {
-    color: azure;
-    padding-left: 18em;
-    padding-right: 1em;
-}
-
-.skills .progress .rate span.bootstrap {
-    color: azure;
-    padding-left: 17em;
-    padding-right: 1em;
-}
-
-.skills .progress .rate span.js {
-    color: azure;
-    padding-left: 10em;
-    padding-right: 1em;
-}
-
-.skills .progress .rate span.git {
-    color: wheat;
-    padding-left: 16em;
-    padding-right: 1em;
-}
-
-.skills .progress .rate span.sass {
-    color: azure;
-    padding-left: 16em;
-    padding-right: 1em;
 }
 
 .resume {
-    background-color: gainsboro;
-    padding-top: 1em;
+    color: #fff;
+    background-color: #678;
+    padding-top: .5em;
     padding-bottom: 2em;
+    margin-bottom: 2em;
     text-align: center;
 }
 
@@ -437,9 +366,9 @@ body {}
     padding-bottom: 1em;
     text-align: center;
     overflow: hidden;
-    border-top: .2em solid palevioletred;
+    border-top: .2em solid #fff;
     border-top-style: dashed;
-    border-bottom: .2em solid palevioletred;
+    border-bottom: .2em solid #fff;
     border-bottom-style: dashed;
 }
 
@@ -449,10 +378,7 @@ body {}
     line-height: 1em;
 }
 
-.testmonial p {
-    font-style: italic;
-}
-
+.testmonial p,
 .testmonial h3 {
     font-style: italic;
 }
@@ -462,23 +388,10 @@ body {}
 }
 
 .testmonial ul li {
+    color: #eee;
     width: 1em;
     height: 1em;
     display: inline-block;
-}
-
-.testmonial ul li button {
-    width: 1em;
-    height: 1em;
-    background-color: gainsboro;
-    border: .1em solid darkblue;
-    border-radius: .5em;
-}
-
-.testmonial ul li button:hover,
-.testmonial ul li button.active {
-    background-color: violet;
-    cursor: pointer;
 }
 
 /* prices Consultation start*/
@@ -487,7 +400,7 @@ body {}
 }
 
 .card-group .card {
-    border: .2em solid palevioletred;
+    border: .2em solid darkblue;
     border-style: groove;
     transition: scale(1.2);
     border-top-left-radius: 4em;
@@ -504,11 +417,12 @@ body {}
 }
 
 .card .card-footer {
-    margin-bottom: .2em;
+    margin-bottom: 1em;
     size: 100%;
     background-color: #eee;
     border: .1em solid palevioletred;
     border-radius: 2em;
+    box-shadow: 6px 6px 6px rgba(20, 30, 200, .5);
 }
 
 .card .card-footer:hover {
@@ -531,33 +445,6 @@ body {}
 }
 
 /* prices Consultation end*/
-
-/*new portfolio start*/
-.portfolio {
-    padding-top: 2em;
-    padding-bottom: 4em;
-    text-align: center;
-}
-
-.portfolio p {
-    padding-bottom: 2em;
-}
-
-.portfolio.prev-work {
-    overflow: hidden;
-}
-
-.portfolio.prev-work > div {
-    float: left;
-    width: 33.3%;
-    margin-bottom: 2em;
-}
-
-.portfolio.prev-work div img {
-    margin: 1em;
-    width: 100%;
-    height: 15em;
-}
 
 .i {
     width: 13em;
@@ -622,12 +509,6 @@ body {}
 @import url(https://fonts.googleapis.com/css?family=Oswald:400,700);
 @import url(https://fonts.googleapis.com/css?family=Open+Sans);
 
-body {
-    background: #F0F0F0;
-    font-family: Open Sans, sans-serif;
-    line-height: 1.5em;
-}
-
 #contact {
     width: 500px;
     margin: 2em auto;
@@ -662,7 +543,7 @@ body {
     font-family: Oswald, sans-serif;
     font-size: 1.75em;
     padding: 0.6em 0 0.6em 0.4em;
-    color: white;
+    color: rgba(25, 25, 112, 1);
     text-shadow: 0 0.06em 0 #424242;
     position: relative;
 }
@@ -708,7 +589,7 @@ body {
     left: -2.95em;
     display: block;
     position: absolute;
-    border-top: 1.2em solid #832032;
+    border-top: 1.2em solid #ddd;
     border-left: 1.6em solid transparent;
     border-right: 1.6em solid transparent;
     border-bottom: 1em solid transparent;
@@ -893,7 +774,7 @@ body {
 
 /* end new contact style*/
 .footer {
-    background-color: #4b3bff;
+    background-color: rgba(30, 30, 130, 3);
     color: #ddd;
     padding: 1em;
     overflow: hidden;
@@ -917,7 +798,7 @@ body {
 
 .footer h4 span {
     color: snow;
-    background-color: #ff3bef;
+    background-color: palevioletred;
 }
 
 .footer ul {
@@ -970,12 +851,12 @@ body {
 }
 
 .page-h2 {
-    color: #777;
+    color: #eee;
     text-transform: capitalize;
 }
 
 .page-p {
-    color: #4b3bff;
+    color: #eee;
     line-height: 2em;
 }
 

@@ -159,18 +159,19 @@ body {}
 /* start about & education style*/
 .about .section,
 .education .section {
-    border: .5em solid #fff;
-    border-radius: 20%;
     margin-top: 2em;
     margin-bottom: 3em;
-    margin-left: 1em;
+    margin-left: 2em;
     background-color: #eee;
+    border-radius: 4em;
+    border: .2em solid black;
     transform: matrix(1, -0.3, 0, 1, 0, 0);
+    box-shadow: 0 .1em 0 .1em inset palevioletred;
 }
 
 .about .section,
 .education .section:hover {
-    transform: none;
+    transform: matrix(1.1, -0.3, 0, 1, 0, 0);
     box-shadow: 0 .1em 0 .1em inset palevioletred;
     background-blend-mode: color-dodge;
 }
@@ -221,8 +222,16 @@ body {}
     flex-direction: column;
     box-shadow: 0 30px 60px rgba(200, 0, 200, .2);
     transition: transform .2s;
+    border: .5em solid #fff;
+    border-radius: 4em;
     border-left: .1em solid palevioletred;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
     overflow: hidden;
+}
+
+.timeline-box:hover {
+    border-radius: 0;
 }
 
 .timeline .round h1,
@@ -259,6 +268,8 @@ body {}
 .add-box {
     padding: 1em;
     background: #fff;
+    border: .5em solid #fff;
+    border-radius: 4em;
     width: auto;
     height: auto;
     display: flex;
@@ -269,6 +280,10 @@ body {}
     box-shadow: 0 30px 60px rgba(200, 0, 200, .2);
     transition: transform .2s;
     overflow: hidden;
+}
+
+.add-box:hover {
+    border-radius: 0;
 }
 
 .add-box .percent {
@@ -341,6 +356,11 @@ body {}
     overflow: hidden;
 }
 
+.skills i {
+    color: palevioletred;
+    font-weight: bold;
+}
+
 .skills .skill,
 .skills .progress {
     width: 50%;
@@ -393,7 +413,7 @@ body {}
 }
 
 .skills .progress .rate span.git {
-    color: azure;
+    color: wheat;
     padding-left: 16em;
     padding-right: 1em;
 }
@@ -413,15 +433,14 @@ body {}
 
 .testmonial {
     height: 10em;
-    background-color: gainsboro;
     padding-top: 1em;
     padding-bottom: 1em;
     text-align: center;
     overflow: hidden;
-    background-color: whitesmoke;
-    border-top: .1em solid palevioletred;
-    border-bottom: .1em solid palevioletred;
-    border-style: dashed;
+    border-top: .2em solid palevioletred;
+    border-top-style: dashed;
+    border-bottom: .2em solid palevioletred;
+    border-bottom-style: dashed;
 }
 
 .testmonial-carousel-caption {
@@ -462,8 +481,58 @@ body {}
     cursor: pointer;
 }
 
-/*new testmonial start*/
-/*new testmonial end*/
+/* prices Consultation start*/
+.card-group {
+    margin-top: 2em;
+}
+
+.card-group .card {
+    border: .2em solid palevioletred;
+    border-style: groove;
+    transition: scale(1.2);
+    border-top-left-radius: 4em;
+    border-top-right-radius: 4em;
+}
+
+.card-group .card img {
+    margin-top: 1em;
+    border-radius: 4em;
+}
+
+.card-group .card img:hover {
+    opacity: 80%;
+}
+
+.card .card-footer {
+    margin-bottom: .2em;
+    size: 100%;
+    background-color: #eee;
+    border: .1em solid palevioletred;
+    border-radius: 2em;
+}
+
+.card .card-footer:hover {
+    border: .1em solid #4b3bff;
+    border-radius: 5em;
+    border-bottom: 0;
+    box-shadow: 5px 5px 5px rgba(0, 0, 139, .5);
+}
+
+.card a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #4b3bff;
+}
+
+.card a:hover {
+    text-decoration: none;
+    font-weight: bolder;
+    color: darkblue;
+}
+
+/* prices Consultation end*/
+
+/*new portfolio start*/
 .portfolio {
     padding-top: 2em;
     padding-bottom: 4em;
@@ -496,13 +565,6 @@ body {}
     border: .2em solid #ccc;
     box-shadow: .2em .2em #4b3bff;
     margin: .3em;
-}
-
-.contact {
-    padding-top: 2em;
-    padding-bottom: 2em;
-    background-color: #ddd;
-    overflow: hidden;
 }
 
 .contact h2 {
@@ -590,6 +652,9 @@ body {
 #contact article {
     padding: 1em;
 }
+
+.sectionheader,
+.submit_wrapper {}
 
 #contact h1 {
     /*background: #F2385A;*/
@@ -830,23 +895,39 @@ body {
 .footer {
     background-color: #4b3bff;
     color: #ddd;
-    padding: 2em;
+    padding: 1em;
     overflow: hidden;
 }
 
-.footer h3 {
+.footer .copyright {
     width: 50%;
     margin: 0;
+    float: left;
+    border-right: .1em solid white;
+    padding-right: 5em;
 }
 
-.footer h3 span {
+.footer .design {
+    width: 50%;
+    margin: 0;
+    float: right;
+    border-left: .1em solid white;
+    padding-left: 5em;
+}
+
+.footer h4 span {
     color: snow;
     background-color: #ff3bef;
 }
 
 .footer ul {
     float: right;
-    width: 50%;
+    margin: 0;
+    padding: 0;
+}
+
+.footer .design ul {
+    float: left;
     margin: 0;
     padding: 0;
 }
@@ -854,8 +935,8 @@ body {
 .footer li {
     list-style: none;
     display: inline-block;
-    float: inherit;
-    padding-left: .2em;
+    float: center;
+    padding-left: .5em;
 }
 
 .footer i {
